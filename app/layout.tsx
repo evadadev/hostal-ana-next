@@ -17,6 +17,9 @@ const RootLayout = (props: Props) => {
 
   return (
     <html lang="es">
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/imgHostal.png" />
+      </head>
       <body>
         <Header />
         <main className="min-h-mainScrren">{children}</main>
