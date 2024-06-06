@@ -15,10 +15,6 @@ export const metadata: Metadata = {
 const RootLayout = (props: Props) => {
   const { children } = props;
 
-  const style = {
-    "min-height": "calc(100vh - 192px)",
-  };
-
   return (
     <html lang="es">
       <head>
@@ -26,7 +22,7 @@ const RootLayout = (props: Props) => {
       </head>
       <body>
         <Header />
-        <main className="min-h-mainScrren" style={style}>
+        <main className="min-h-mainScrren" style={{ minHeight: "calc(100vh - 192px)"}}>
           {children}
         </main>
         <Footer />
