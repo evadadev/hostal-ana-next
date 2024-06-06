@@ -94,7 +94,7 @@ const GalleryPage = () => {
                 <TitlePage name={t('galeria')}/>
                 <p className="text-grey-ligth md:w-9/12 text-justify">{t('textGaleria')}</p>
                 <div className="grid grid-cols-3 gap-4 md:w-9/12 place-self-auto mt-5"> 
-                {photos.map(photo => (<img src={photo.image} className="hover:opacity-50" onClick={() => openModal(photo)}/>))}
+                {photos.map(photo => (<img key={photo.id} src={photo.image} className="hover:opacity-50" onClick={() => openModal(photo)}/>))}
                 {isModalOpen && (
                     <>
                     <FontAwesomeIcon icon={faXmark} size="2xl" color="white" className="fixed z-20 top-32 right-11 cursor-pointer" onClick={closeModal}/>
