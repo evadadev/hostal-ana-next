@@ -18,7 +18,7 @@ const RootLayout = (props: Props) => {
   return (
     <html lang="es">
       <head>
-        <link rel="icon" type="image/svg+xml" href="/imgHostal.png" />
+      <link rel="icon" type="image/svg+xml" href="/imgHostal.png" />
       </head>
       <body>
         <Header />
