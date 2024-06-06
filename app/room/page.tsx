@@ -35,8 +35,8 @@ const RoomsPage = () => {
     return (
             <WrapperPage>
                 <TitlePage name={t('cabeceraHabitaciones')}/>
-                {rooms.map(room => (
-                    <RoomCard room={room}/>
+                {rooms.map((room, i) => (
+                    <RoomCard key={i} room={room}/>
                 ))}
             </WrapperPage>
     )
