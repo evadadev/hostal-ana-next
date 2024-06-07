@@ -39,23 +39,23 @@ export const SideBar: React.FC = () => {
                     </button>
                     <div className="flex items-center ml-5 gap-3 hover:text-secundary">
                     <FontAwesomeIcon icon={faHouse} />
-                    <Link onClick={handleClose} onTouchStart={handleOpen} href="/home" className="text-2xl">{t('inicio')}</Link>
+                    <Link onClick={handleClose} onTouchEnd={handleClose} href="/home" className="text-2xl">{t('inicio')}</Link>
                     </div>
                     <div className="flex items-center ml-5 gap-3 hover:text-secundary">
                     <FontAwesomeIcon icon={faBed} />
-                    <Link onClick={handleClose} onTouchStart={handleOpen} href="/room" className="text-2xl ">{t('habitaciones')}</Link>
+                    <Link onClick={handleClose} onTouchEnd={handleClose} href="/room" className="text-2xl ">{t('habitaciones')}</Link>
                     </div>
                     <div className="flex items-center ml-5 gap-3 hover:text-secundary">
                     <FontAwesomeIcon icon={faLocationDot} />
-                    <Link onClick={handleClose} onTouchStart={handleOpen} href="/location" className="text-2xl ">{t('ubicacion')}</Link>
+                    <Link onClick={handleClose} onTouchEnd={handleClose} href="/location" className="text-2xl ">{t('ubicacion')}</Link>
                     </div>
                     <div className="flex items-center ml-5 gap-3 hover:text-secundary">
                     <FontAwesomeIcon icon={faCamera} />
-                    <Link onClick={handleClose} onTouchStart={handleOpen} href="/gallery" className="text-2xl">{t('galeria')}</Link>
+                    <Link onClick={handleClose} onTouchEnd={handleClose} href="/gallery" className="text-2xl">{t('galeria')}</Link>
                     </div>
                     <div className="flex items-center ml-5 gap-3 hover:text-secundary">
                     <FontAwesomeIcon icon={faEnvelope} />
-                    <Link onClick={handleClose} onTouchStart={handleOpen} href="/contact" className="text-2xl ">{t('contacto')}</Link>
+                    <Link onClick={handleClose} onTouchEnd={handleClose} href="/contact" className="text-2xl ">{t('contacto')}</Link>
                     </div>
                 </div> 
             )}
