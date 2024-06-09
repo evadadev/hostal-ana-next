@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -15,6 +17,8 @@ import { useTranslation } from "react-i18next";
 import Link from "next/link";
 
 export const SideBar: React.FC = () => {
+  const router = useRouter();
+
   const { t } = useTranslation();
   const [openModal, setOpenModal] = useState(false);
 
@@ -22,8 +26,12 @@ export const SideBar: React.FC = () => {
     setOpenModal(true);
   };
 
-  const handleClose = () => {
+  const handleClose = (link: string) => {
     setOpenModal(false);
+
+    if (link !== "") {
+      router.push(`/${link}`);
+    }
   };
 
   return (
@@ -41,8 +49,8 @@ export const SideBar: React.FC = () => {
       {openModal && (
         <div className="absolute top-0 left-0 z-10 flex flex-col bg-slate-50 gap-10 w-full h-screen  text-primary">
           <button
-            onClick={handleClose}
-            onTouchStart={handleClose}
+            onClick={() => handleClose("")}
+            onTouchStart={() => handleClose("")}
             className="flex items-center mt-5 ml-5 font-bold gap-1 hover:text-secundary"
           >
             <FontAwesomeIcon icon={faXmark} />
@@ -51,8 +59,8 @@ export const SideBar: React.FC = () => {
           <div className="flex items-center ml-5 gap-3 hover:text-secundary">
             <FontAwesomeIcon icon={faHouse} />
             <Link
-              onClick={handleClose}
-              onTouchStart={handleClose}
+              onClick={() => handleClose("home")}
+              onTouchStart={() => handleClose("home")}
               href="/home"
               className="text-2xl"
             >
@@ -62,8 +70,8 @@ export const SideBar: React.FC = () => {
           <div className="flex items-center ml-5 gap-3 hover:text-secundary">
             <FontAwesomeIcon icon={faBed} />
             <Link
-              onClick={handleClose}
-              onTouchStart={handleClose}
+              onClick={() => handleClose("room")}
+              onTouchStart={() => handleClose("room")}
               href="/room"
               className="text-2xl "
             >
@@ -73,8 +81,8 @@ export const SideBar: React.FC = () => {
           <div className="flex items-center ml-5 gap-3 hover:text-secundary">
             <FontAwesomeIcon icon={faLocationDot} />
             <Link
-              onClick={handleClose}
-              onTouchStart={handleClose}
+              onClick={() => handleClose("location")}
+              onTouchStart={() => handleClose("location")}
               href="/location"
               className="text-2xl "
             >
@@ -84,8 +92,8 @@ export const SideBar: React.FC = () => {
           <div className="flex items-center ml-5 gap-3 hover:text-secundary">
             <FontAwesomeIcon icon={faCamera} />
             <Link
-              onClick={handleClose}
-              onTouchStart={handleClose}
+              onClick={() => handleClose("gallery")}
+              onTouchStart={() => handleClose("gallery")}
               href="/gallery"
               className="text-2xl"
             >
@@ -95,8 +103,8 @@ export const SideBar: React.FC = () => {
           <div className="flex items-center ml-5 gap-3 hover:text-secundary">
             <FontAwesomeIcon icon={faEnvelope} />
             <Link
-              onClick={handleClose}
-              onTouchStart={handleClose}
+              onClick={() => handleClose("contact")}
+              onTouchStart={() => handleClose("contact")}
               href="/contact"
               className="text-2xl "
             >
