@@ -14,7 +14,7 @@ export const RoomCard: React.FC<Props> = (props) => {
 
     return (
         <>
-        <div className="bg-slate-50 flex flex-col gap-4 lg:w-9/12">
+        <div className="bg-slate-50 flex flex-col justify-between gap-4 lg:w-9/12">
             <h3 className="text-secundary uppercase font-bold mt-5 mx-5">{room.name}</h3>
             <div className="flex flex-col-reverse gap-2 lg:gap-6 lg:flex-row mx-5 mb-5">
                 <div className="flex flex-col gap-3">
