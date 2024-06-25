@@ -121,7 +121,7 @@ i18next
                 despripcionHabSimple: 'Las habitaciones son sencillas y disponen en algunos casos de balcón a la calle.',
                 despripcionHabDoble: 'Las habitaciones superiores cuentan con zona de descanso y cocina básica. Tienen capacidad para 4 personas previa solicitud.',
                 descripcionHabDoble2: 'Las habitaciones dobles con 2 camas disponen de balcón ideal para disfrutar de las bellas vistas.',
-                cabeceraHabitaciones: 'Caracteristicas de las habitaciones',
+                cabeceraHabitaciones: 'Características de las habitaciones',
                 iconInternet: 'Internet Wifi gratis',
                 iconTelevision: 'Televisión por satélite',
                 iconAireAcondicionado: 'Aire acondicionado',
