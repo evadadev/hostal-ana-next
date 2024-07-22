@@ -4,7 +4,6 @@ import { useTranslation } from "next-i18next";
 
 const HomePage = () => {
     const { t } = useTranslation();
-
     return (
             <div>
                 <div className="static w-full h-96 bg-cover bg-no-repeat bg-center bg-[url(/home.jpeg)]">
