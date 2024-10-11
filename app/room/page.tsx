@@ -29,7 +29,6 @@ const RoomsPage = () => {
             description: t('descripcionHabDoble2'),
             img: "habitacion-jose2.jpg"
         }
-
     ]
 
     return (
